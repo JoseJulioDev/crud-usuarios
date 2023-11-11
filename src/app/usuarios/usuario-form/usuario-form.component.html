@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-toolbar color="primary">{{titulo}}</mat-toolbar>
+
+  <mat-card-content>
+    <form [formGroup]="form">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Nome" formControlName="nome" #nome>
+        <mat-hint align="end">{{ nome.value.length || 0 }} / 50</mat-hint>
+        <mat-error *ngIf="form.get('nome')?.invalid">{{
+          getErrorMessage("nome")
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput  type="email" placeholder="Email" formControlName="email">
+        <mat-error *ngIf="form.get('email')?.invalid">{{
+          getErrorMessage("email")
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width" *ngIf="!form.controls.id.value">
+        <input matInput type="password" placeholder="Senha" formControlName="senha" #senha>
+        <mat-hint align="end">{{ senha.value.length || 0 }} / 20</mat-hint>
+        <mat-error *ngIf="form.get('senha')?.invalid">{{
+          getErrorMessage("senha")
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width" *ngIf="!form.controls.id.value">
+        <input matInput type="password"  placeholder="Confirmação da senha" formControlName="confirmacaoSenha" #confirmacaoSenha>
+        <mat-hint align="end">{{ confirmacaoSenha.value.length || 0 }} / 20</mat-hint>
+        <mat-error *ngIf="form.get('confirmacaoSenha')?.invalid">{{
+          getErrorMessage("confirmacaoSenha")
+        }}</mat-error>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="form.invalid">Salvar</button>
+    <button mat-raised-button (click)="onCancel()">Cancelar</button>
+  </mat-card-actions>
+</mat-card>
