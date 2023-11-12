@@ -1,7 +1,7 @@
 # CrudUsuarios
 
 ## Description
-Aplicação em Angular 12 com o foco em fazer o cadastro,edição, exclusão e listagem de  usuários
+Aplicação em Angular 12 com as operações  cadastro, edição, exclusão e listagem de usuários
 
 
 ## Install
