@@ -5,14 +5,23 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Descrição
 Aplicação em angular com o foco em fazer o cadastro,edição, exclusão e listagem de  usuários
 
-Install
+
+## Install
+
+```sh
 npm install
+```
 
-Usage
+## Usage
+
+```sh
 npm run start
+```
 
-Test
+## Test
+```sh
 npm t
+```
 
 Author
 👤 José Julio
