@@ -95,8 +95,8 @@ export class UsuarioFormComponent implements OnInit {
     }
 
     if (field?.hasError('email')) {
-      return `Email Inválido`;
-  }
+      return 'Email Inválido';
+    }
 
     if (fieldName == 'nome') {
       if (field?.hasError('minlength')) {
